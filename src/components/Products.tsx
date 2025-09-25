@@ -57,7 +57,7 @@ const Products = () => {
     <section id="products" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-16 animate-fade-in">
+        <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="gradient-text">Produtos Veterinários</span>
           </h2>
@@ -74,7 +74,7 @@ const Products = () => {
             return (
               <div 
                 key={category.title}
-                className="group relative p-8 card-gradient rounded-2xl shadow-medium hover:shadow-strong transition-all duration-300 hover:-translate-y-2"
+                className={`group relative p-8 card-gradient rounded-2xl shadow-medium hover:shadow-strong transition-all duration-300 hover:-translate-y-2 animate-scale-in animate-delay-${(index + 1) * 100}`}
               >
                 <div className="absolute top-6 right-6 px-3 py-1 accent-gradient rounded-full text-sm font-medium">
                   {category.highlight}
@@ -105,7 +105,7 @@ const Products = () => {
         </div>
 
         {/* Featured Products */}
-        <div className="bg-background rounded-3xl shadow-strong p-8 md:p-12">
+        <div className="bg-background rounded-3xl shadow-strong p-8 md:p-12 animate-slide-right">
           <div className="flex flex-col lg:flex-row gap-12 items-center">
             <div className="lg:w-1/2">
               <h3 className="text-3xl md:text-4xl font-bold mb-6">

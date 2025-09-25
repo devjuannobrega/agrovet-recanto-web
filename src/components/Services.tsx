@@ -58,7 +58,7 @@ const Services = () => {
     <section id="services" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-16 animate-fade-in">
+        <div className="text-center mb-16 animate-bounce-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="gradient-text">Serviços Veterinários</span>
           </h2>
@@ -75,7 +75,7 @@ const Services = () => {
             return (
               <div 
                 key={service.title}
-                className="group relative p-6 card-gradient rounded-2xl shadow-medium hover:shadow-strong transition-all duration-300 hover:-translate-y-2"
+                className={`group relative p-6 card-gradient rounded-2xl shadow-medium hover:shadow-strong transition-all duration-300 hover:-translate-y-2 animate-fade-in-up animate-delay-${(index + 1) * 100}`}
               >
                 <div className="w-14 h-14 hero-gradient rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Icon className="w-7 h-7 text-primary-foreground" />
@@ -105,7 +105,7 @@ const Services = () => {
 
         {/* Main Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
-          <div>
+          <div className="animate-slide-left">
             <img
               src={servicesImage}
               alt="Veterinário examinando cachorro"
@@ -113,7 +113,7 @@ const Services = () => {
             />
           </div>
           
-          <div>
+          <div className="animate-slide-right">
             <h3 className="text-3xl md:text-4xl font-bold mb-6">
               Cuidado <span className="gradient-text">Profissional</span> e Humanizado
             </h3>
@@ -177,7 +177,7 @@ const Services = () => {
           {stats.map((stat, index) => {
             const Icon = stat.icon;
             return (
-              <div key={stat.label} className="text-center p-6 card-gradient rounded-xl shadow-soft">
+              <div key={stat.label} className={`text-center p-6 card-gradient rounded-xl shadow-soft animate-bounce-in animate-delay-${(index + 1) * 100}`}>
                 <div className="w-12 h-12 hero-gradient rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Icon className="w-6 h-6 text-primary-foreground" />
                 </div>

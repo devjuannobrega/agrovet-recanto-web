@@ -17,7 +17,7 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-16 animate-fade-in">
+        <div className="text-center mb-16 animate-bounce-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="gradient-text">Entre em Contato</span>
           </h2>
@@ -29,7 +29,7 @@ const Contact = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
           {/* Contact Info */}
-          <div className="lg:col-span-1 space-y-8">
+          <div className="lg:col-span-1 space-y-8 animate-slide-left">
             <div>
               <h3 className="text-2xl font-bold mb-6">Informações de Contato</h3>
               
@@ -104,7 +104,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 animate-slide-right">
             <div className="p-8 card-gradient rounded-2xl shadow-strong">
               <h3 className="text-2xl font-bold mb-6">Envie uma Mensagem</h3>
               

@@ -41,7 +41,7 @@ const About = () => {
     <section id="about" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-16 animate-fade-in">
+        <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="gradient-text">Sobre a Agroshop Vet</span>
           </h2>
@@ -53,7 +53,7 @@ const About = () => {
 
         {/* Main Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
-          <div>
+          <div className="animate-slide-left">
             <h3 className="text-3xl md:text-4xl font-bold mb-6">
               Nossa <span className="gradient-text">História</span>
             </h3>
@@ -83,9 +83,9 @@ const About = () => {
             </Button>
           </div>
           
-          <div className="space-y-8">
+          <div className="space-y-8 animate-slide-right">
             {/* Mission Card */}
-            <div className="p-8 card-gradient rounded-2xl shadow-medium">
+            <div className="p-8 card-gradient rounded-2xl shadow-medium animate-scale-in">
               <div className="w-12 h-12 hero-gradient rounded-xl flex items-center justify-center mb-4">
                 <Award className="w-6 h-6 text-primary-foreground" />
               </div>
@@ -98,7 +98,7 @@ const About = () => {
             </div>
             
             {/* Vision Card */}
-            <div className="p-8 card-gradient rounded-2xl shadow-medium">
+            <div className="p-8 card-gradient rounded-2xl shadow-medium animate-scale-in animate-delay-200">
               <div className="w-12 h-12 accent-gradient rounded-xl flex items-center justify-center mb-4">
                 <MapPin className="w-6 h-6 text-accent-foreground" />
               </div>
@@ -118,7 +118,7 @@ const About = () => {
             return (
               <div 
                 key={value.title}
-                className="group text-center p-8 card-gradient rounded-2xl shadow-medium hover:shadow-strong transition-all duration-300 hover:-translate-y-2"
+                className={`group text-center p-8 card-gradient rounded-2xl shadow-medium hover:shadow-strong transition-all duration-300 hover:-translate-y-2 animate-fade-in-up animate-delay-${(index + 1) * 100}`}
               >
                 <div className="w-16 h-16 hero-gradient rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Icon className="w-8 h-8 text-primary-foreground" />

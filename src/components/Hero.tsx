@@ -16,7 +16,7 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-2xl animate-fade-in">
+        <div className="max-w-2xl animate-slide-left">
           <div className="flex items-center gap-3 mb-6">
             <div className="flex gap-1">
               {[...Array(5)].map((_, i) => (
@@ -39,21 +39,21 @@ const Hero = () => {
 
           {/* Features */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-            <div className="flex items-center gap-3 p-4 card-gradient rounded-lg shadow-soft">
+            <div className="flex items-center gap-3 p-4 card-gradient rounded-lg shadow-soft animate-fade-in-up animate-delay-100">
               <Shield className="w-8 h-8 text-primary" />
               <div>
                 <h3 className="font-semibold">Produtos Certificados</h3>
                 <p className="text-sm text-muted-foreground">Qualidade garantida</p>
               </div>
             </div>
-            <div className="flex items-center gap-3 p-4 card-gradient rounded-lg shadow-soft">
+            <div className="flex items-center gap-3 p-4 card-gradient rounded-lg shadow-soft animate-fade-in-up animate-delay-200">
               <Heart className="w-8 h-8 text-primary" />
               <div>
                 <h3 className="font-semibold">Cuidado Especializado</h3>
                 <p className="text-sm text-muted-foreground">Veterinários experientes</p>
               </div>
             </div>
-            <div className="flex items-center gap-3 p-4 card-gradient rounded-lg shadow-soft">
+            <div className="flex items-center gap-3 p-4 card-gradient rounded-lg shadow-soft animate-fade-in-up animate-delay-300">
               <Stethoscope className="w-8 h-8 text-primary" />
               <div>
                 <h3 className="font-semibold">Atendimento Completo</h3>
@@ -63,11 +63,11 @@ const Hero = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button variant="hero" size="xl" className="animate-float">
+          <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animate-delay-400">
+            <Button variant="hero" size="xl">
               Ver Produtos
             </Button>
-            <Button variant="outline" size="xl">
+            <Button variant="outline" size="xl" className="animate-float">
               Nossos Serviços
             </Button>
           </div>
